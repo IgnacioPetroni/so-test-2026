@@ -1,23 +1,27 @@
-// Usamos este evento para asegurarnos de que el HTML cargó por completo
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Creamos el botón
+    // 1. Crear el botón de modo oscuro
     const btnTema = document.createElement('button');
-    btnTema.textContent = 'Dark Mode';
-    btnTema.classList.add('btn-toggle'); // Le damos una clase por si querés darle estilo
+    btnTema.textContent = '🌙 Modo Oscuro';
+    btnTema.classList.add('btn-toggle');
+    
+    // Lo insertamos al principio del body
+    document.body.prepend(btnTema);
 
-    // 2. Lo metemos al final del body
-    document.body.appendChild(btnTema);
-
-    // 3. La lógica del click
+    // 2. Evento Click para cambiar el modo
     btnTema.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
 
-        // Cambiamos el texto según el modo
         if (document.body.classList.contains('dark-mode')) {
-            btnTema.textContent = '🔦';
+            btnTema.textContent = '☀️ Modo Claro';
         } else {
-            btnTema.textContent = '🌑';
+            btnTema.textContent = '🌙 Modo Oscuro';
         }
+    });
+
+    // 3. Manejo del formulario (opcional, para que no recargue la página)
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('¡Intento de login enviado!');
     });
 });

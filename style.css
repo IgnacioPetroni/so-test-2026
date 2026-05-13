@@ -6,6 +6,25 @@ h1{
     text-align: center;
 }
 
+body {
+    background-color: white;
+    color: black;
+    transition: background 0.3s, color 0.3s; /* Para que el cambio sea suave */
+    font-family: sans-serif;
+}
+
+body .dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
 .perfil{
     display: block;
     border-radius: 10px;

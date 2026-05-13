@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 1. Creamos el botón
     const btnTema = document.createElement('button');
-    btnTema.textContent = '🌙 Modo Oscuro';
+    btnTema.textContent = 'Dark Mode';
     btnTema.classList.add('btn-toggle'); // Le damos una clase por si querés darle estilo
 
     // 2. Lo metemos al final del body
@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Cambiamos el texto según el modo
         if (document.body.classList.contains('dark-mode')) {
-            btnTema.textContent = '☀️ Modo Claro';
+            btnTema.textContent = '🔦';
         } else {
-            btnTema.textContent = '🌙 Modo Oscuro';
+            btnTema.textContent = '🌑';
         }
     });
 });
